@@ -52,6 +52,64 @@ This demonstrates DNS query attempts without response, useful for understanding 
 
 ---
 
+
+---
+
+## 🟢 ICMP and DNS Traffic Analysis
+
+![ICMP_DNS](screenshots/icmp_dns.png)
+
+This capture shows both ICMP and DNS traffic observed together in the Host-Only lab network.
+
+Filter used: icmp || dns
+
+
+### What was observed
+
+- ICMP Echo requests and replies between attacker and victim (host discovery)
+- DNS query attempts from Kali machine
+- No DNS response due to isolated Host-Only network
+
+### Analysis
+
+This demonstrates how an analyst can correlate host discovery activity (ICMP) with DNS query behavior to understand what a machine is trying to access on the network.
+
+---
+
+## 🔵 TCP 3-Way Handshake, HTTP Request and Keep-Alive
+
+File: `tcp_handshake_http_keepalive.pcapng`
+
+This capture demonstrates a complete TCP session between Kali and Windows after opening a listening port on the victim machine.
+
+Filter used: tcp.port == 9000
+
+
+### TCP 3-Way Handshake observed
+
+1. SYN — Client initiates connection  
+2. SYN, ACK — Server acknowledges  
+3. ACK — Client confirms
+
+### HTTP Communication
+
+After the handshake, an HTTP GET request is observed from Kali to the Windows listener.
+
+### TCP Keep-Alive
+
+Later packets show TCP Keep-Alive and Keep-Alive ACK packets, proving the connection remained active.
+
+### Analysis
+
+This demonstrates how Wireshark can be used to analyze:
+
+- TCP connection establishment
+- Application layer communication (HTTP)
+- TCP session maintenance (Keep-Alive)
+
+
+
+
 ## 🎯 Learning Outcome
 
 - Understanding of packet-level network traffic
