@@ -123,5 +123,8 @@ This demonstrates how Wireshark can be used to analyze:
 
 This project simulates real-world attacker and victim communication and demonstrates how a security analyst can detect suspicious activities using Wireshark packet analysis.
 
+---
 
+### Author: **Kavindra Patel**
+# Wireshark-network-analysis-project
 
