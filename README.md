@@ -56,8 +56,7 @@ This demonstrates DNS query attempts without response, useful for understanding 
 ---
 
 ## 🟢 ICMP and DNS Traffic Analysis
-
-![ICMP_DNS](Screenshots/icmp_dns.png)
+Files:(icmp_dns.png)
 
 This capture shows both ICMP and DNS traffic observed together in the Host-Only lab network.
 
